@@ -1,0 +1,141 @@
+.timeline {
+  display: flex;
+  &__start,
+  &__end {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    p {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 21px;
+      letter-spacing: 0.1em;
+    }
+    &__code {
+      width: 33px;
+      height: 21px;
+      background: rgba(77, 70, 250, 0.1);
+      border-radius: 100px;
+      text-align: center;
+      font-weight: 600;
+      font-size: 10px;
+      line-height: 21px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+  }
+  &__estimate {
+    padding: 0 10px;
+    text-align: center;
+    p {
+      font-weight: 400;
+      font-size: 14px;
+    }
+  }
+}
+.line__time {
+  content: "";
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 1px;
+  width: 70px;
+  border: 1px solid #4d46fa;
+  &::before {
+    content: "";
+    left: -2px;
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    background: #ffffff;
+    border: 1px solid #4d46fa;
+    border-radius: 100px;
+  }
+  &::after {
+    content: "";
+    right: -2px;
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    background: #4d46fa;
+    border: 1px solid #4d46fa;
+    border-radius: 100px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .timeline {
+    &__start,
+    &__end {
+      p {
+        font-size: 10px;
+      }
+      &__code {
+        width: 30px;
+        height: 18px;
+        font-size: 8px;
+      }
+    }
+    &__estimate {
+      p {
+        font-weight: 400;
+        font-size: 10px;
+      }
+    }
+  }
+  .line__time {
+    width: 40px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .timeline {
+    &__start,
+    &__end {
+      p {
+        font-size: 6px;
+      }
+      &__code {
+        width: 17px;
+        height: 10px;
+        font-size: 5px;
+        line-height: 10px;
+      }
+    }
+    &__estimate {
+      p {
+        font-weight: 400;
+        font-size: 10px;
+      }
+    }
+  }
+  .line__time {
+    width: 28px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .timeline {
+    &__start,
+    &__end {
+      p {
+        font-size: 4px;
+      }
+      &__code {
+        width: 17px;
+        height: 10px;
+        font-size: 5px;
+        line-height: 10px;
+      }
+    }
+    &__estimate {
+      p {
+        font-weight: 400;
+        font-size: 8px;
+      }
+    }
+  }
+  .line__time {
+    width: 20px;
+  }
+}

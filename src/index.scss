@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// @font-face {
+//   font-family: "SVN-Biennale";
+//   font-weight: 200;
+//   src: url("./fonts/Fontspring-DEMO-biennale-light.otf");
+// }
+
+// @font-face {
+//   font-family: "SVN-Biennale";
+//   font-weight: 800;
+//   src: url("./fonts/Fontspring-DEMO-biennale-bold.otf");
+// }
+
+// @font-face {
+//   font-family: "SVN-Biennale";
+//   font-weight: 600;
+//   src: url("./fonts/Fontspring-DEMO-biennale-semibold.otf");
+// }
+
+@font-face {
+  font-family: "SVN-Biennale";
+  font-weight: 200;
+  src: url("./fonts/Objectivity/Objectivity-Light.otf");
+}
+
+@font-face {
+  font-family: "SVN-Biennale";
+  font-weight: 800;
+  src: url("./fonts/Objectivity/Objectivity-Bold.otf");
+}
+@font-face {
+  font-family: "SVN-Biennale";
+  font-weight: 400;
+  src: url("./fonts/Objectivity/Objectivity-Medium.otf");
+}
+
+@font-face {
+  font-family: "SVN-Biennale";
+  font-weight: 400;
+  src: url("./fonts/Objectivity/Objectivity-Regular.otf");
+}
+
+* {
+  font-size: 14px;
+}

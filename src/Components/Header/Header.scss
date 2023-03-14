@@ -1,0 +1,152 @@
+@mixin active-href() {
+  padding: 10px 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 100px;
+}
+
+.header {
+  display: flex;
+  position: fixed;
+  align-items: center;
+  text-align: center;
+
+  height: 80px;
+  padding: 0 170px;
+  width: 100%;
+
+  top: 0;
+  z-index: 10;
+
+  background-color: transparent;
+
+  &__left {
+    display: flex;
+    flex: 0.8;
+    align-items: center;
+
+    font-weight: 600;
+
+    > * {
+      font-size: 20px;
+      margin-right: 10px;
+    }
+  }
+  &__center {
+    flex: 1.5;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__right {
+    flex: 0.7;
+
+    justify-content: flex-end;
+    text-align: end;
+
+    .btn {
+      color: white;
+      padding: 10px 16px;
+
+      background: #4d46fa;
+      border-radius: 12px;
+    }
+  }
+}
+.active {
+  background: #4d46fa;
+  color: white;
+}
+.active-a {
+  @include active-href();
+}
+
+.btn-active {
+  background-color: white !important;
+  color: #4d46fa !important;
+}
+
+.circle-lang {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #4d46fa;
+  border-radius: 100px;
+}
+
+@media screen and (max-width: 1024px) {
+  .header {
+    padding: 0 5%;
+  }
+  .header__center {
+    a {
+      font-size: 12px;
+    }
+  }
+  .btn {
+    font-size: 10px;
+    padding: 5px 8px;
+  }
+  .header__left {
+    svg {
+      display: none;
+    }
+  }
+  .circle-lang {
+    display: none;
+  }
+}
+@media screen and (max-width: 750px) {
+  .header {
+    padding: 0 2%;
+    &__left {
+      a {
+        font-size: 16px;
+      }
+    }
+  }
+  .header__center {
+    a {
+      font-size: 8px;
+    }
+  }
+}
+@media screen and (max-width: 480px) {
+  .header {
+    height: 40px;
+    padding: 0 1%;
+    &__left {
+      flex: 1;
+      a {
+        font-size: 8px;
+      }
+    }
+    &__center {
+      flex: 2;
+    }
+    &__right {
+      flex: 0.8;
+    }
+  }
+  .header__center {
+    a {
+      font-size: 6px;
+    }
+  }
+  .btn {
+    font-size: 6px;
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 40px;
+    height: 20px;
+  }
+  .active-a {
+    padding: 0;
+    background-color: transparent;
+  }
+}
